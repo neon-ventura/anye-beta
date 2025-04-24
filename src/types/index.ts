@@ -1,3 +1,4 @@
+
 export interface Product {
   id: string;
   image: string;
@@ -13,8 +14,11 @@ export interface Product {
   gtin: string;
   location: string;
   seller: string;
+  sellerPermalink: string;
   catalog: boolean;
   productCost: number;
+  mlb: string;
+  permalink: string;
 }
 
 export interface Integration {

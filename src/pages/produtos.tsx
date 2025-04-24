@@ -10,6 +10,7 @@ import { ApiKeyModal } from "@/components/api-key-modal";
 import { Button } from "@/components/ui/button";
 import { KeyRound } from "lucide-react";
 import { useProductData } from "@/hooks/use-product-data";
+
 export default function Produtos() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
@@ -24,15 +25,15 @@ export default function Produtos() {
     title: true,
     price: true,
     sales: true,
-    daysToSell: false,
-    shipping: false,
-    fees: false,
-    receivable: false,
-    type: false,
-    gtin: false,
-    location: false,
-    seller: false
+    daysToSell: true,
+    shipping: true,
+    receivable: true,
+    type: true,
+    location: true,
+    seller: true,
+    mlb: true
   });
+
   const {
     toast
   } = useToast();
@@ -48,6 +49,7 @@ export default function Produtos() {
     fetchProducts,
     totalFound
   } = useProductData();
+
   useEffect(() => {
     console.log("Current state on products page:", {
       products: products.length,
@@ -58,6 +60,7 @@ export default function Produtos() {
       totalFound
     });
   }, [products, filteredProducts, isLoading, isStreamComplete, currentPage, totalFound]);
+
   const handleSearch = () => {
     if (!cep) {
       toast({
@@ -70,12 +73,15 @@ export default function Produtos() {
     fetchProducts(searchTerm, cep);
     setIsCepLocked(true);
   };
+
   const handleCepChange = (value: string) => {
     setCep(value);
   };
+
   const toggleCepLock = () => {
     setIsCepLocked(!isCepLocked);
   };
+
   const handleProductSelect = (productId: string, isChecked: boolean) => {
     if (isChecked) {
       setSelectedProducts([...selectedProducts, productId]);
@@ -83,12 +89,14 @@ export default function Produtos() {
       setSelectedProducts(selectedProducts.filter(id => id !== productId));
     }
   };
+
   const handleColumnVisibilityChange = (column: string, visible: boolean) => {
     setColumnVisibility(prev => ({
       ...prev,
       [column]: visible
     }));
   };
+
   const handleMarketplaceChange = (marketplace: "mercadolivre" | "shopee") => {
     setSelectedMarketplace(marketplace);
     toast({
@@ -98,6 +106,7 @@ export default function Produtos() {
     });
     handleSearch();
   };
+
   return <>
       <Helmet>
         <title>Product Search - Anye Parts</title>

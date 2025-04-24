@@ -1,4 +1,5 @@
-import { AutoMessage, Compatibility, Integration, Product, ProfitabilityData, RevenueData, SalesStats, StockStats } from '@/types';
+
+import { Product, Integration, Compatibility, AutoMessage, ProfitabilityData, RevenueData, SalesStats, StockStats } from '@/types';
 
 export const products: Product[] = [
   {
@@ -16,8 +17,11 @@ export const products: Product[] = [
     gtin: "7893698573283",
     location: "Queimados",
     seller: "SPIRITOFICIAL",
+    sellerPermalink: "https://loja.mercadolivre.com.br/spiritoficial",
     catalog: false,
-    productCost: 315.96
+    productCost: 315.96,
+    mlb: "MLB1234567",
+    permalink: "https://produto.mercadolivre.com.br/MLB1234567"
   },
   {
     id: "2",
@@ -34,8 +38,11 @@ export const products: Product[] = [
     gtin: "7896771020551",
     location: "Queimados",
     seller: "SPIRITOFICIAL",
+    sellerPermalink: "https://loja.mercadolivre.com.br/spiritoficial",
     catalog: false,
-    productCost: 404.96
+    productCost: 404.96,
+    mlb: "MLB2345678",
+    permalink: "https://produto.mercadolivre.com.br/MLB2345678"
   },
   {
     id: "3",
@@ -52,8 +59,11 @@ export const products: Product[] = [
     gtin: "7899729177635",
     location: "Queimados",
     seller: "SPIRITOFICIAL",
+    sellerPermalink: "https://loja.mercadolivre.com.br/spiritoficial",
     catalog: true,
-    productCost: 359.96
+    productCost: 359.96,
+    mlb: "MLB3456789",
+    permalink: "https://produto.mercadolivre.com.br/MLB3456789"
   },
   {
     id: "4",
@@ -70,8 +80,11 @@ export const products: Product[] = [
     gtin: "7898315540433",
     location: "Queimados",
     seller: "SPIRITOFICIAL",
+    sellerPermalink: "https://loja.mercadolivre.com.br/spiritoficial",
     catalog: true,
-    productCost: 359.96
+    productCost: 359.96,
+    mlb: "MLB4567890",
+    permalink: "https://produto.mercadolivre.com.br/MLB4567890"
   },
   {
     id: "5",
@@ -88,8 +101,11 @@ export const products: Product[] = [
     gtin: "7901886779031",
     location: "Queimados",
     seller: "SPIRITOFICIAL",
+    sellerPermalink: "https://loja.mercadolivre.com.br/spiritoficial",
     catalog: false,
-    productCost: 445.46
+    productCost: 445.46,
+    mlb: "MLB5678901",
+    permalink: "https://produto.mercadolivre.com.br/MLB5678901"
   },
   {
     id: "6",
@@ -106,8 +122,11 @@ export const products: Product[] = [
     gtin: "7899836916233",
     location: "São Paulo",
     seller: "JRMAGAZINES",
+    sellerPermalink: "https://loja.mercadolivre.com.br/jrmagazines",
     catalog: true,
-    productCost: 399.95
+    productCost: 399.95,
+    mlb: "MLB6789012",
+    permalink: "https://produto.mercadolivre.com.br/MLB6789012"
   },
   {
     id: "7",
@@ -124,8 +143,11 @@ export const products: Product[] = [
     gtin: "7899836916196",
     location: "São Paulo",
     seller: "JRMAGAZINES",
+    sellerPermalink: "https://loja.mercadolivre.com.br/jrmagazines",
     catalog: true,
-    productCost: 299.95
+    productCost: 299.95,
+    mlb: "MLB7890123",
+    permalink: "https://produto.mercadolivre.com.br/MLB7890123"
   },
 ];
 

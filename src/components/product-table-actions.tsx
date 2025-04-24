@@ -1,4 +1,3 @@
-
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Filter, Download, Plus, Search, Info, Columns, Lock } from "lucide-react";
@@ -59,12 +58,11 @@ export function ProductTableActions({
     { key: 'daysToSell', label: 'Tempo para Vender' },
     { key: 'sales', label: 'Vendas' },
     { key: 'shipping', label: 'Frete' },
-    { key: 'fees', label: 'Taxas' },
     { key: 'receivable', label: 'Recebível' },
     { key: 'type', label: 'Tipo' },
-    { key: 'gtin', label: 'GTIN/EAN' },
     { key: 'location', label: 'Localidade' },
     { key: 'seller', label: 'Vendedor' },
+    { key: 'mlb', label: 'MLB' },
   ];
   
   return (

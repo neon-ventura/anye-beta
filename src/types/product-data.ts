@@ -10,15 +10,19 @@ export interface ApiProductData {
     sales_quantity: number;
     shipping_tax: number;
     listing_tax: number;
+    leftover: number; // Added the missing leftover property
     type?: string;
     gtin?: string;
     available_quantity?: number;
+    catalog_id?: string;
+    logistic_type?: string;
     seller: {
       address: {
         state: string
       },
       nickname: string
-    }
+    },
+    permalink: string;
   };
 }
 
